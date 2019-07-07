@@ -22,6 +22,6 @@ export class CommissionsComponent implements OnInit {
   }
   selectCommission(member: ImageID) {
     this.selectedWork = member;
-    this.selectedImage = "./assets/images/Commissioned/commissions_" + this.selectedWork.id + ".jpg";
+    this.selectedImage = "src/app/assets/images/Commissioned/commissions_" + this.selectedWork.id + ".jpg";
   }
 }
