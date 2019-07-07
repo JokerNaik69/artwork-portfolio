@@ -1,0 +1,21 @@
+<h2>Random Kittens</h2>
+
+<div>
+  This is a drawing series that I created to help me learn and test different drawing techniques. Since I use my own drawing style, I still have to improvise to see what I can
+  do with this art style. Click the buttons below to see different works that I have created. 
+</div>
+<BR>
+<button *ngFor= "let kitten of randomKittensList" (click)="selectKitten(kitten)" style = "text-align: center">
+  {{kitten.name | uppercase}}<br>
+  </button>
+  <BR>
+  <div *ngIf="selectedWork" style="text-align: center">
+    <h2>
+        {{selectedWork.name | uppercase}}
+    </h2>
+  
+    <img src={{selectedImage}} alt="image not present"> <br>
+   <h3>Description</h3>
+    {{selectedWork.description}}
+  </div>
+  <BR>

@@ -1,0 +1,20 @@
+<h2>Commissions</h2>
+
+<div>As I continued to draw, some people has requested me to do commissions for them. This page includes commissions that I have done thus far. Similar to my other works, 
+  the style of later drawings can be significantly different due to me learning new techniques to use when drawing. 
+</div>
+<BR>
+<button *ngFor= "let commission of commissionsList" (click)="selectCommission(commission)" style = "text-align: center">
+  {{commission.name | uppercase}}<br>
+  </button>
+  <BR>
+  <div *ngIf="selectedWork" style="text-align: center">
+    <h2>
+        {{selectedWork.name | uppercase}}
+    </h2>
+  
+    <img src={{selectedImage}} alt="image not present"> <br>
+   <h3>Description</h3>
+    {{selectedWork.description}}
+  </div>
+  <BR>

@@ -1,0 +1,21 @@
+<h2>Other works</h2>
+
+<div>
+In this section, I show drawings that I just created randomly. They do not have any particular themes
+and 
+</div>
+<br>
+<button *ngFor= "let etc of etcList" (click)="selectEtc(etc)" style = "text-align: center">
+  {{etc.name | uppercase}}<br>
+  </button>
+  <BR>
+  <div *ngIf="selectedWork" style="text-align: center">
+    <h2>
+        {{selectedWork.name | uppercase}}
+    </h2>
+  
+    <img src={{selectedImage}} alt="image not present"> <br>
+   <h3>Description</h3>
+    {{selectedWork.description}}
+  </div>
+  <BR>
